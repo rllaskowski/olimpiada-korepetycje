@@ -29,7 +29,7 @@ tab[3000] = 9;
 tab["Napis"] = 10;
 ```
 
-Korzystanie z mapy znosi oba ograniczenia. Tworząc mapę możemy zdecydowąć jakim typem będzie ona indeksowana, oraz
+Korzystanie z mapy znosi oba ograniczenia. Tworząc mapę możemy zdecydować jakim typem będzie ona indeksowana, oraz
 jaki będzie typ trzymanych wartości. Wielkość mapy zmienia się również dynamicznie w trakcie działania programu.
 
 ```cpp
