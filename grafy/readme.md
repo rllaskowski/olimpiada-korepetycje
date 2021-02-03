@@ -44,3 +44,5 @@ wierzchołka, który nie został wcześniej odwiedzony - przejdź tą krawędzi�
 - W przeciwnym przypadku wróć skąd przyszedłeś
 
 Najczęstsza(i najprostsza) [implementacja](/grafy/dfs.cpp) tego algorytmu wykorzystuje rekurencję 
+
+![DFS animacja](/zdjecia/dfs_animation.png)
