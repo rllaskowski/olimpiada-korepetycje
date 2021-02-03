@@ -76,6 +76,7 @@ b = x_2-x_1 \\
 $$ --> 
 
 <div align="center"><img style="background: white;" src="../svg/2O41L9IIWv.svg"></div>
+
 Teraz korzystając ze tw. Pitagorasa wyliczmy długość przeciwprostokątnej - oznaczmy ją przez **c**
 <!-- $$
 c^2 = a^2+b^2
