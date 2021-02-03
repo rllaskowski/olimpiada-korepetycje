@@ -17,11 +17,14 @@ Graf, w którym wszystkie krawedzie prowadzą w obie strony.
 
 Innymi słowy, jeśli istnieje krawędź `a->b` to istnieje również krawędź `b->a`
 
+![Graf nieskierowany](/zdjecia/nieskierowany.png)
+
 ### Graf skierowany
 Graf, w którym krawędzie prowadzą w jedną stronę.
 
 Innymi słowy, jeśli z istnienia krawędzi `a->b` nie wynika istnienie krawędzi `b->a`
 
+![Graf skierowany](/zdjecia/skierowany.png)
 ### Graf spójny
 Graf nieskierowany, w którym istnieje conajmniej jedna ścieżka między każdą parą wierzchołków
 
@@ -40,4 +43,4 @@ Algorytm DFS inaczej przeszukiwanie grafu w głąb opiera się na bardzo proste
 wierzchołka, który nie został wcześniej odwiedzony - przejdź tą krawędzią
 - W przeciwnym przypadku wróć skąd przyszedłeś
 
-Najczęstszą(i najprostsza) implementacją 
+Najczęstsza(i najprostsza) implementacja tego algorytmu wykorzystuje rekurencję 
