@@ -95,7 +95,6 @@ if (zbior.size() == 3) {
     cout << "Ten tekst zostanie wypisany, ponieważ do zbioru należą 3 wartości: 3, 5, 10";
 }
 
-
 // Sprawdzenie czy wartość jest w zbiorze
 if (zbior.count(5) > 0) {
     cout << "Zbiór zawiera wartość 5";
