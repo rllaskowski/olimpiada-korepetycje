@@ -46,7 +46,8 @@ $$ -->
 
 Innymi suma kwadratów przyprostokątnych jest równa kwadratowi przecwiprostokątnej
 
-![Tw. Pitagorasa](/zdjecia/tw_pitagorasa.png)
+
+<div align="center"><img style="background: white;" src="/zdjecia/tw_pitagorasa.png"></div>
 
 ### Odległość między punktami
 
