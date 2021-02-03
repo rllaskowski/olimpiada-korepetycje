@@ -59,7 +59,7 @@ P_2 = (x_2; y_2)
 \end{aligned}
 $$ --> 
 
-<div align="center"><img style="background: white;" src="../svg/yRcwVQdgDC.svg"></div>
+<div align="center"><img style="background: white;" src="../svg/e5hHAvLSV3.svg"></div>
 
 możemy obliczyć odległość między tymi punktami korzystając ze wzoru Pitagorasa:
 
