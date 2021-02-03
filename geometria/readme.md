@@ -62,7 +62,9 @@ $$ -->
 <div align="center"><img style="background: white;" src="../svg/e5hHAvLSV3.svg"></div>
 
 Aby obliczyć odległość między punktami tworzymy trójkąt prostokątny podobnie jak na rysunku
-![odl punkty](/zdjecia/odl_punkty.png)
+
+
+<div align="center"><img style="background: white;" src="/zdjecia/odl_punkty.png"></div>
 
 Wprowadźmy oznaczenia
 $$
@@ -72,13 +74,18 @@ b = x_2-x_1 \\
 \end{aligned}
 $$
 Teraz korzystając ze tw. Pitagorasa wyliczmy długość przeciwprostokątnej - oznaczmy ją przez **c**
-$$
-\begin{aligned}
-c^2 = a^2+b^2 \\
-&\Downarrow \\
+<!-- $$
+c^2 = a^2+b^2
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/LEjqYbzDad.svg"></div>
+więc
+
+<!-- $$
 c = \sqrt{a^2+b^2}
-\end{aligned}
-$$
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/bDRzqb99rm.svg"></div>
 
 ```cpp
 float odlegosc(pair<int, int> p1, pair<int, int p2>) {
