@@ -50,7 +50,7 @@ Innymi suma kwadratów przyprostokątnych jest równa kwadratowi przecwiprostok�
 
 ### Odległość między punktami
 
-Znajac współprzędne dwóch punktów:
+Dane są dwa punkty
 
 <!-- $$
 \begin{aligned}
@@ -61,7 +61,7 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="../svg/e5hHAvLSV3.svg"></div>
 
-Aby obliczyć odległość między punktami tworzymy trójkąt prostokątny podobnie jak na rysunku
+Aby obliczyć odległość między nimi tworzymy trójkąt prostokątny podobnie jak na rysunku
 
 
 <div align="center"><img style="background: white;" src="/zdjecia/odl_punkty.png"></div>
