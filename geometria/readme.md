@@ -52,12 +52,14 @@ Innymi suma kwadratów przyprostokątnych jest równa kwadratowi przecwiprostok�
 
 Znajac współprzędne dwóch punktów:
 
-$$
+<!-- $$
 \begin{aligned}
 P_1 = (x_1; y_1) \\
 P_2 = (x_2; y_2) 
 \end{aligned}
-$$
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/yRcwVQdgDC.svg"></div>
 
 możemy obliczyć odległość między tymi punktami korzystając ze wzoru Pitagorasa:
 
