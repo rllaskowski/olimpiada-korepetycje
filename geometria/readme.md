@@ -3,13 +3,19 @@
 ## Nierówność trójkąta:
 
 Jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
-``` 
+<!-- $$
 a >= b >= c
-```
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/88fCE5EyTM.svg"></div>
 to zachodzi nierówność
-```math
+
+<!-- $$
 b+c > a
-```
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/jyEiZp1QVi.svg"></div>
+
 Również w drugą stronę - trójkąt można zbudować, tylko jeśli suma krótszych boków jest większa
 niż najdłuższy bok.
 
