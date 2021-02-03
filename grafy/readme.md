@@ -9,6 +9,9 @@
 Ciąg wierzchołków, w którym wszystkie sąsiadujące wierzchołki są połączone ze sobą
 krawędzią. (droga przechodząca po wierzchołkach przez łączące je krawędzie)
 
+Zaznaczona na rysunku ścieżka:
+`2->0->3->4->1`
+
 ![sciezka](/zdjecia/sciezka.png)
 
 ### Cykl
