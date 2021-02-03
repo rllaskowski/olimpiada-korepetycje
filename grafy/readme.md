@@ -15,7 +15,7 @@ Zaznaczona na rysunku ścieżka:
 ![sciezka](/zdjecia/sciezka.png)
 
 ### Cykl
-Ścieżka, niezerowej długości, która rozpoczyna i kończy się w jednym wierzchołku
+Ścieżka niezerowej długości, która rozpoczyna i kończy się w jednym wierzchołku
 
 Jeden z cykli na rysunku poniżej: `1->3->4->2->1`
 
