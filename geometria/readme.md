@@ -1,14 +1,15 @@
 # Geometria
 
-## Nierówność trójkąta:
+### Nierówność trójkąta:
 
-Jeśli oznaczymy boki trójkąta jako a,b,c - tak że 
+Jeśli oznaczymy boki trójkąta jako **a**,**b**,**c** tak że:
 <!-- $$
 a >= b >= c
 $$ --> 
 
 <div align="center"><img style="background: white;" src="../svg/88fCE5EyTM.svg"></div>
-to zachodzi nierówność
+
+to zachodzi nierówność:
 
 <!-- $$
 b+c > a
@@ -30,27 +31,33 @@ bool czyTrojkat(int a, int b, int c) {
 ```
 [Nierówność trójkąta](http://oblicz.com.pl/nierownosc-trojkata/)
 
-## Tw. Pitagorasa
+### Tw. Pitagorasa
 
-Jeśli długości boków trójkąta prostokątnego to a,b,c
-oraz a,b - długości przyprostokątnych, c - długość przecwiprostokątnej
+Jeśli długości boków trójkąta prostokątnego to **a**,**b**,**c**
+oraz **a**,**b** - długości przyprostokątnych, **c** - długość przecwiprostokątnej
 
 to zachodzi 
 
-```
+<!-- $$
 a^2+b^2 = c^2
-```
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/enAKzc7DOZ.svg"></div>
 
 Innymi suma kwadratów przyprostokątnych jest równa kwadratowi przecwiprostokątnej
 
-[Tw. Pitagorasa](https://www.matemaks.pl/twierdzenie-pitagorasa.html)
+![Tw. Pitagorasa](/zdjecia/tw_pitagorasa.png)
 
-
-## Odległość między punktami
+### Odległość między punktami
 
 Znajac współprzędne dwóch punktów:
 
-(x1, y1) oraz (x2, y2)
+$$
+\begin{aligned}
+P_1 = (x_1; y_1) \\
+P_2 = (x_2; y_2) 
+\end{aligned}
+$$
 
 możemy obliczyć odległość między tymi punktami korzystając ze wzoru Pitagorasa:
 
