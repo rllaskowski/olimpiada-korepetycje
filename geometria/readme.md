@@ -68,12 +68,14 @@ Aby obliczyć odległość między punktami tworzymy trójkąt prostokątny podo
 <div align="center"><img style="background: white;" src="/zdjecia/odl_punkty.png"></div>
 
 Wprowadźmy oznaczenia
-$$
+<!-- $$
 \begin{aligned}
 a = y_2-y_1 \\ 
 b = x_2-x_1 \\
 \end{aligned}
-$$
+$$ --> 
+
+<div align="center"><img style="background: white;" src="../svg/2O41L9IIWv.svg"></div>
 Teraz korzystając ze tw. Pitagorasa wyliczmy długość przeciwprostokątnej - oznaczmy ją przez **c**
 <!-- $$
 c^2 = a^2+b^2
