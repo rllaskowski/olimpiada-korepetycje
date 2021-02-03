@@ -61,8 +61,24 @@ $$ -->
 
 <div align="center"><img style="background: white;" src="../svg/e5hHAvLSV3.svg"></div>
 
-możemy obliczyć odległość między tymi punktami korzystając ze wzoru Pitagorasa:
+Aby obliczyć odległość między punktami tworzymy trójkąt prostokątny podobnie jak na rysunku
+![odl punkty](/zdjecia/odl_punkty.png)
 
+Wprowadźmy oznaczenia
+$$
+\begin{aligned}
+a = y_2-y_1 \\ 
+b = x_2-x_1 \\
+\end{aligned}
+$$
+Teraz korzystając ze tw. Pitagorasa wyliczmy długość przeciwprostokątnej - oznaczmy ją przez **c**
+$$
+\begin{aligned}
+c^2 = a^2+b^2 \\
+&\Downarrow \\
+c = \sqrt{a^2+b^2}
+\end{aligned}
+$$
 
 ```cpp
 float odlegosc(pair<int, int> p1, pair<int, int p2>) {
