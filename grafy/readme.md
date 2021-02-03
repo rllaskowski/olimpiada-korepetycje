@@ -43,4 +43,4 @@ Algorytm DFS inaczej przeszukiwanie grafu w głąb opiera się na bardzo proste
 wierzchołka, który nie został wcześniej odwiedzony - przejdź tą krawędzią
 - W przeciwnym przypadku wróć skąd przyszedłeś
 
-Najczęstsza(i najprostsza) implementacja tego algorytmu wykorzystuje rekurencję 
+Najczęstsza(i najprostsza) [implementacja](/grafy/dfs.cpp) tego algorytmu wykorzystuje rekurencję 
