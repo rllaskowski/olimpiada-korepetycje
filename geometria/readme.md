@@ -29,7 +29,6 @@ bool czyTrojkat(int a, int b, int c) {
     return (suma-najdluzszy) > najdluzszy;
 }
 ```
-[Nierówność trójkąta](http://oblicz.com.pl/nierownosc-trojkata/)
 
 ### Tw. Pitagorasa
 
@@ -121,10 +120,3 @@ bool czyMniejsza(pair<int, int> p1, pair<int, int p2>, long long odleglosc) {
 
 Dzięki temu unikamy używania typów zmiennoprzecinkowych: float, double, ...
 
-[Odległość między punktami](https://matematykaszkolna.pl/strona/1248.html)
-
-
-
-## Podobieństwo trójkątów
-
-[Do przeczytania](https://www.matemaks.pl/podobienstwo-trojkatow.html)
