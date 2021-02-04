@@ -86,6 +86,12 @@ Błąd! Na kolejka nie ma już elementów
 kolejka.pop();
 */
 ```
+Więcej informacji:
+  - [Kolejka na Cpp0x](https://cpp0x.pl/kursy/Kurs-STL-C++/Adapter-kolejki-std-queue/117)
+
+  - [Kolejka na cplusplus](https://www.cplusplus.com/reference/queue/queue/) 
+
+
 ### Stos
 Aby skorzystać ze stosu w C++ dodajemy do programu bibliotekę `stack`
 
@@ -127,6 +133,11 @@ Błąd! Na stosie nie ma już elementów
 stos.pop();
 */
 ```
+Więcej informacji:
+  - [Stos na Cpp0x](https://cpp0x.pl/kursy/Kurs-STL-C++/Adapter-stosu-std-stack/116)
+
+  - [Stos na cplusplus](https://www.cplusplus.com/reference/stack/stack/) 
+
 ### Vector
 Aby skorzystać z vectorów w C++ dodajemy do programu bibliotekę `vector`
 
@@ -197,10 +208,12 @@ duzyWektor[2] = "Tekst";
 /* Możemy też zmniejszyć rozmiar vectora. Ostatnie elementy usuną się */
 duzyWektor.resize(2);
 /* duzyWektor = {"", ""}
-
-
 ```
 
+Więcej informacji:
+  - [Vector na Cpp0x](https://cpp0x.pl/dokumentacja/standard-C++/vector/819)
+
+  - [Vector na cplusplus](https://www.cplusplus.com/reference/vector/vector/) 
 ### Mapa(tablica asosjacyjna, słownik)
 
 Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map`
@@ -308,6 +321,10 @@ kolega["Andrzej"] = "Maciej";
 Pamiętajmy jednak, że korzystanie z map zamiast tablic, kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu klucz->wartość) wykonuje się w czasie logarytmicznym od ilości wstawionych do mapy kluczy.
 Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się zapisać za pomocą zwykłych tablic.
 
+Więcej informacji:
+  - [Mapa na Cpp0x](https://cpp0x.pl/kursy/Kurs-C++/Poziom-5/Kontenery-asocjacyjne-std-set-i-std-map/589)
+
+  - [Mapa na cplusplus](https://www.cplusplus.com/reference/map/map/) 
 ### Zbiór
 
 Aby skorzystać z zbiorów w C++ dodajemy do programu bibliotekę `set`
@@ -368,4 +385,9 @@ int największa = *zbior.rbegin();
 ```
 Operacje dodawania, usuwania i liczenia występowań wartości w zbiorze są wykonywane w czasie logarytmicznym od wielkości zbioru.
 
+Więcej informacji:
+  - [Set na Cpp0x](https://cpp0x.pl/kursy/Kurs-C++/Poziom-5/Kontenery-asocjacyjne-std-set-i-std-map/589)
+
+  - [Set na cplusplus](https://www.cplusplus.com/reference/set/set/) 
+  
 ## Przydatne funkcje
