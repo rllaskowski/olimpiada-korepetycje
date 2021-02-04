@@ -88,7 +88,6 @@ kolejka.pop();
 ```
 Szczegółowa dokumentacja:
   - [Kolejka na Cpp0x](https://cpp0x.pl/kursy/Kurs-STL-C++/Adapter-kolejki-std-queue/117)
-
   - [Kolejka na cplusplus](https://www.cplusplus.com/reference/queue/queue/) 
 
 
@@ -135,7 +134,6 @@ stos.pop();
 ```
 Szczegółowa dokumentacja:
   - [Stos na Cpp0x](https://cpp0x.pl/kursy/Kurs-STL-C++/Adapter-stosu-std-stack/116)
-
   - [Stos na cplusplus](https://www.cplusplus.com/reference/stack/stack/) 
 
 ### Vector
@@ -212,7 +210,6 @@ duzyWektor.resize(2);
 
 Szczegółowa dokumentacja:
   - [Vector na Cpp0x](https://cpp0x.pl/dokumentacja/standard-C++/vector/819)
-
   - [Vector na cplusplus](https://www.cplusplus.com/reference/vector/vector/) 
 ### Mapa(tablica asosjacyjna, słownik)
 
@@ -323,8 +320,8 @@ Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się zapisać z
 
 Szczegółowa dokumentacja:
   - [Mapa na Cpp0x](https://cpp0x.pl/kursy/Kurs-C++/Poziom-5/Kontenery-asocjacyjne-std-set-i-std-map/589)
-
-  - [Mapa na cplusplus](https://www.cplusplus.com/reference/map/map/) 
+  - [Mapa na cplusplus](https://www.cplusplus.com/reference/map/map/)
+  
 ### Zbiór
 
 Aby skorzystać z zbiorów w C++ dodajemy do programu bibliotekę `set`
@@ -387,7 +384,6 @@ Operacje dodawania, usuwania i liczenia występowań wartości w zbiorze są wyk
 
 Szczegółowa dokumentacja:
   - [Set na Cpp0x](https://cpp0x.pl/kursy/Kurs-C++/Poziom-5/Kontenery-asocjacyjne-std-set-i-std-map/589)
-
   - [Set na cplusplus](https://www.cplusplus.com/reference/set/set/) 
   
 ## Przydatne funkcje
