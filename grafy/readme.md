@@ -95,6 +95,7 @@ W przeciwnym przypadku:
 
 
 **Przykład**
+
 ![macierz](/zdjecia/nieskierowany.png)
 |  nr | 1 | 2 | 3 | 4 |  
 |:---:|:-:|:-:|:-:|:-:|
@@ -132,6 +133,7 @@ to `b` będzie na liście sąsiedztwa wierzchołka `a`.
 To podejście możemy zrealizować za pomocą tablicy vectorów(rozszerzalne tablice w C++). Dla każdego numeru wierzchołka, w jego osobnym vectorze, zapiszemy wszystkie numery wierzchołków, do których prowadzi krawędź.
 
 **Przykład**
+
 ![lista sąs](/zdjecia/nieskierowany.png)
 
 | nr  | lista sąsiedztwa(vector) |
