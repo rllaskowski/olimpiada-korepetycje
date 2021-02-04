@@ -47,14 +47,8 @@ int main() {
 
     int a, b;
     for (int i = 0; i < m; i++) {
-        /* wczytanie wierzchołków połączonych krawędzią */
         cin >> a >> b;
 
-        /* 
-        Do krawędzi wierzchołka o numerze a dodajemy wierzchołek o numerze b
-        oraz na odwrót.
-        UWAGA! jeśli graf ma być nieskierowany, dodajemy tylko krawędź w jedną stronę!
-        */
         kraw[a].push_back(b);
         kraw[b].push_back(a);
     }
