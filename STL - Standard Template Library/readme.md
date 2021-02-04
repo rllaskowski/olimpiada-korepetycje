@@ -242,7 +242,7 @@ tab[-1] = 10;
 */
 ```
 
-Ograniczenia w postaci stałego rozmiaru możemy pozbyć się za pomocą vectorów. Natomiar wciąż pozostaje problem dotyczący zakresu indeksów oraz ich typów. 
+Ograniczenia w postaci stałego rozmiaru możemy się pozbyć za pomocą vectorów. Natomiast wciąż pozostaje problem dotyczący zakresu indeksów oraz ich typów. 
 Korzystanie z mapy znosi oba ograniczenia. Tworząc mapę możemy zdecydować jakim typem będzie ona indeksowana, oraz
 jaki będzie typ trzymanych wartości. Wielkość mapy zmienia się również dynamicznie w trakcie działania programu przy dodawaniu do niej nowego klucza/indeksu.
 
@@ -254,31 +254,63 @@ która trzyma wartości typu string
 int - klucz/indeks
 string - wartość
 */
-map<int, string> miejsce;
+map<int, string> mapa;
+/* mapa = {} */
 
-miejsce[1] = "Oskar";
+mapa[1] = "Oskar";
+/*
+mapa = {
+    1: "Oskar"
+}
+*/
 
 /* Możemy korzystać z naprawdę dużych indeksów */
-miejsce[12312411] = "Maciej";
+mapa[12312411] = "Maciej";
+/*
+mapa = {
+    1: "Oskar",
+    12312411: "Maciej"
+}
+*/
 
 /* A nawet z indeksów ujemnych */ 
-miejsce[-1233] = "Bartosz";
+mapa[-1233] = "Bartosz";
+/*
+mapa = {
+    -1233: "Bartosz",
+    1: "Oskar",
+    12312411: "Maciej"
+}
+*/
+
 
 /*
 Błąd! indeksy stworzonej przez nas mapy mają być typu int 
-miejsce["Ala"] = "Błażej"
+mapa["Ala"] = "Błażej"
 */
 
 /* Stwórzmy mapę indeksowaną przez string, trzymającą wartości typu int */
 map<string, int> ocena;
+/* ocena = {} */
 
 /* Teraz jest dobrze. */
 ocena["Ala"] = 5;
+/*
+ocena = {
+    "Ala": 5
+}
+*/
 
 /* A teraz mapa indeksowana przez string, trzymająca zmienne typu string */
 map<string, string> kolega;
+/* kolega = {} */
 
 kolega["Andrzej"] = "Maciej";
+/* 
+kolega = {
+    "Andrzej": "Maciej"
+}
+
 ```
 
 Pamiętajmy jednak, że korzystanie z map zamiast tablic, kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu) wykonuje się w czasie logarytmicznym od ilości wstawionych do mapy kluczy.
