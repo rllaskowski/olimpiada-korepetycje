@@ -258,11 +258,7 @@ map<int, string> mapa;
 /* mapa = {} */
 
 mapa[1] = "Oskar";
-/*
-mapa = {
-    1: "Oskar"
-}
-*/
+/* mapa = { 1: "Oskar" } */
 
 /* Możemy korzystać z naprawdę dużych indeksów */
 mapa[12312411] = "Maciej";
@@ -283,7 +279,6 @@ mapa = {
 }
 */
 
-
 /*
 Błąd! indeksy stworzonej przez nas mapy mają być typu int 
 mapa["Ala"] = "Błażej"
@@ -295,21 +290,14 @@ map<string, int> ocena;
 
 /* Teraz jest dobrze. */
 ocena["Ala"] = 5;
-/*
-ocena = {
-    "Ala": 5
-}
-*/
+/* ocena = { "Ala": 5 } */
 
 /* A teraz mapa indeksowana przez string, trzymająca zmienne typu string */
 map<string, string> kolega;
 /* kolega = {} */
 
 kolega["Andrzej"] = "Maciej";
-/* 
-kolega = {
-    "Andrzej": "Maciej"
-}
+/* kolega = { "Andrzej": "Maciej" } */
 
 ```
 
