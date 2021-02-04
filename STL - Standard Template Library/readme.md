@@ -301,7 +301,7 @@ kolega["Andrzej"] = "Maciej";
 
 ```
 
-Pamiętajmy jednak, że korzystanie z map zamiast tablic, kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu) wykonuje się w czasie logarytmicznym od ilości wstawionych do mapy kluczy.
+Pamiętajmy jednak, że korzystanie z map zamiast tablic, kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu klucz->wartość) wykonuje się w czasie logarytmicznym od ilości wstawionych do mapy kluczy.
 Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się zapisać za pomocą zwykłych tablic.
 
 ### Zbiór
@@ -362,6 +362,6 @@ int najmniejsza = *zbior.begin();
 int największa = *zbior.rbegin();
 
 ```
-
+Operacje dodawania, usuwania i liczenia występowań wartości w zbiorze są wykonywane w czasie logarytmicznym od wielkości zbioru.
 
 ## Przydatne funkcje
