@@ -3,6 +3,7 @@
     - [Para](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
      - [Kolejka](/STL%20-%20Standard%20Template%20Library/readme.md#Kolejka)
     - [Stos](/STL%20-%20Standard%20Template%20Library/readme.md#Stos)
+    - [Vector](/STL%20-%20Standard%20Template%20Library#vector)
     - [Mapa](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
     - [Zbiór](/STL%20-%20Standard%20Template%20Library/readme.md#zbiór)
 - [Przydatne funkcje](/STL%20-%20Standard%20Template%20Library/readme.md#przydatne-funkcje)
