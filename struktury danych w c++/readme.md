@@ -1,13 +1,57 @@
 # Struktury danych w C++
 
-## Mapy
+## Stos
+Aby skorzystać ze stosu w C++ dodajemy do programu bibliotekę `stack`
+
+```cpp
+#include <stack>
+```
+
+[Opis działania stosu](/struktury%20danych/readme.md#Stos)
+
+```cpp
+/* stworzenie stosu trzymającego inty */
+stack<int> stos;
+
+/* dodaj na górę stosu wartości 3, 5 */
+stos.push(3);
+stos.push(5);
+
+/* wypisze 2 */
+cout << stos.size() << endl;
+
+/*
+Błąd! Stworzony stos trzyma int'y
+stos.push("coś");
+*/
+
+/* wypisz ostatnią wartość na stosie - 5 */
+cout << stos.top();
+
+if (stos.empty()) {
+    cout << "Stos jest pusty" << endl;
+}
+
+/* Zdejmij ostatnią wartość ze stosu x2 */
+stos.pop();
+stos.pop()
+
+/*
+Błąd! Na stosie nie ma już elementów 
+stos.pop();
+*/
+```
+
+
+## Mapa(tablica asosjacyjna, słownik)
 
 Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map`
 
 ```cpp
 #include <map>
 ```
-### Mapy a tablice
+### Mapa a tablica
+
 Klasyczne tablice w C++ mają z góry określoną, stałą wielkość oraz pozwalają na korzystanie tylko z indeksów liczbowych.
 Ze względu na swój ograniczony rozmiar, odniesienie się do za dużych indeksów poskutkuje błądem wykonania programu.
 
@@ -33,18 +77,24 @@ Korzystanie z mapy znosi oba ograniczenia. Tworząc mapę możemy zdecydować ja
 jaki będzie typ trzymanych wartości. Wielkość mapy zmienia się również dynamicznie w trakcie działania programu.
 
 ```cpp
-// Tworzymy mapę indeksowaną przez int, która trzyma zmienne typu string
+/*
+Tworzymy mapę indeksowaną przez int, 
+która trzyma wartości typu string
+
+int - klucz/indeks
+string - wartość
+*/
 map<int, string> miejsce;
 
 miejsce[1] = "Oskar";
 
-// Świetnie! możemy korzystać z naprawdę dużych indeksów
+// Możemy korzystać z naprawdę dużych indeksów(pamiętając aby były w zakresie int'a)
 miejsce[12312411] = "Maciej";
 
 // A nawet z indeksów ujemnych! 
 miejsce[-1233] = "Bartosz";
 
-// Błąd... indeksy stworzonej przez nas mapy mają być typu int!
+/(Błąd... indeksy stworzonej przez nas mapy mają być typu int!
 miejsce["Ala"] = "Błażej"
 
 // Stwórzmy tablicę indeksowaną przez typ string, trzymającą wartości typu int
@@ -62,7 +112,7 @@ kolega["Andrzej"] = "Maciej";
 Pamiętajmy jednak, że korzystanie z map zamiast tablic, będzie kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu) wykonuje się w czasie logarytmicznym od ilości elementów w mapie. 
 Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się zapisać za pomocą zwykłych tablic.
 
-## Zbiory
+## Zbiór
 
 Aby skorzystać z zbiorów w C++ dodajemy do programu bibliotekę `set`
 
@@ -87,8 +137,10 @@ zbior.insert(10);
 // Ta instrukcja nie będzie miala wpływu na nasz zbiór, ponieważ zawiera on już wartość 5
 zbior.insert(5);
 
-// Błąd! Nasz zbiór trzyma zmienne typu int
+/* 
+Błąd! Nasz zbiór trzyma zmienne typu int
 zbiór.insert("napis");
+*/
 
 // Możemy sprawdzić jaka jest wielkość naszego zbioru funkcją size()
 if (zbior.size() == 3) {
