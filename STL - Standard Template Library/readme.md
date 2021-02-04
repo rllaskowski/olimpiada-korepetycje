@@ -336,14 +336,17 @@ Każda wartość w zbiorze występuje w nim dokładnie raz. Dodanie jej drugi ra
 ```cpp
 /* Tworzymy nowy zbiór trzymający wartości typu int */
 set<int> zbior;
+/* zbior = {} */
 
-/* Dodaj do zbioru wartości 3, 5, 10 */
+/* Dodaj do zbioru wartości 3, 10, 5 */
 zbior.insert(3);
-zbior.insert(5);
 zbior.insert(10);
+zbior.insert(5);
+/* zbior = {3, 5, 10} */
 
 /* Ta instrukcja nie będzie miala wpływu na nasz zbiór, ponieważ zawiera on już wartość 5 */
 zbior.insert(5);
+/* zbior = {3, 5, 10} */
 
 /* 
 Błąd! Nasz zbiór trzyma zmienne typu int
@@ -362,11 +365,12 @@ if (zbior.count(5) > 0) {
 
 /* Usuń ze zbioru wartość 5 */
 zbior.erase(5);
+/* zbior = {3, 10} */
 
-/* Wzięcie najmniejszej wartości */
+/* Wzięcie najmniejszej wartości = 3 */
 int najmniejsza = *zbior.begin();
 
-/* Wzięcie największej wartości */
+/* Wzięcie największej wartości = 10 */
 int największa = *zbior.rbegin();
 
 ```
