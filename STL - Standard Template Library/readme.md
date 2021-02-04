@@ -2,6 +2,7 @@
 
 ## Struktury danych w STL
 
+- [Stos](/STL%20-%20Standard%20Template%20Library/readme.md#Stos)
 ### Para
 Aby skorzystać ze par w C++ dodajemy do programu bibliotekę `utility`.
 
