@@ -4,8 +4,8 @@
 using namespace std;
 
 /*
-w tej tablicy trzymamy, czy wierzchołek już został odwiedzony
 odw[x] == true jeśli wierzchołek o numerze x już został odwiedzony
+odw[x] == false w przeciwnym przypadku
 */
 bool odw[100001];
 

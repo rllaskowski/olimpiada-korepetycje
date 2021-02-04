@@ -1,13 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
 /*
-w tej tablicy trzymamy, czy wierzchołek już został odwiedzony
-odw[x] == true jeśli wierzchołek o numerze x już został odwiedzony
+odw[x] == true jeśli wierzchołek o numerze x ma już ustawioną odległość
+odw[x] == false w przeciwnym przypadku
 */
 bool odw[100001];
+
+/*
+odl[x] - odleglość x od wierzchołka startowego
+*/
+int odl[100001];
 
 /*
 Tzw. listy sąsiedztwa - tablica vectorow
@@ -18,23 +24,35 @@ z wierzchołka x
 */
 vector<int> kraw[100001];
 
-void dfs(int v) {
-    cout << "Jestem w wierzchołku " << v << endl;
+void bfs(int s) {
+    queue<int> wierz;
 
-    /* pęta foreach - przydatna, gdy chcemy przejrzeć wszystkie elementy vectora */
-    for (int x : kraw[v]) {
-        /* x jest numerem pewnego wierzchołka, który jest na liście sąsiedztwa
-        wierzchołka v. Zatem istnieje krawędź v->x */
+    /* dodaj na kolejkę wierzchołek startowy */
+    wierz.push(s);
+    /* ustaw odległość 0 wierzchołkowi startowemu */
+    odl[s] = 0;
 
-        if (!odw[x]) {
-            /* Jeśli wierzchołek x nie jest odwiedzony - wejdźmy do niego 
-            Wykonujemy to za pomocą wywołania dfs podając x w argumencie jako wierzchołek */
-            dfs(x);
+    /* dopóki kolejka niepusta */
+    while (!wierz.empty()) {
+        /* zdejmij z kolejki wierzchołek v */
+        int v = wierz.front();
+        wierz.pop();
+
+        /* pętla foreach - przydatna do przejrzenia wszystkich
+        elemenentów vectora
+        
+        Dla każdej krawędzi v->x*/
+        for (int x : kraw[v]) {
+            /* jeśli x nie ma ustawionej odległości */
+            if (!odw[x]) {
+                /* ustaw x odległość o 1 większą niż odległość v */
+                odl[x] = odl[v]+1;
+                odw[x] = true;
+                /* wstaw x na kolejkę */
+                wierz.push(x);
+            }
         }
     }
-
-    /* Zakończenie funkcji jest równoważne wyjściu z wierzchołka,
-    w którym aktualnie jesteśmy / wrócenie do wierzchołka, z którego przyszliśmy */
 }
 
 int main() {
@@ -60,7 +78,16 @@ int main() {
     }
 
     /* Rozpocznij przeszukiwanie wszerz od wierzchołka 1 */
-    dfs(1);
+    bfs(1);
+    
+    for (int i = 1; i <= n; i++) {
+        if (odw[i]) {
+            cout << i << ": " << odl[i] << endl;
+        } else {
+            cout << i << ": ----" << endl;
+        }
+        
+    }
 
     return 0;
 }
