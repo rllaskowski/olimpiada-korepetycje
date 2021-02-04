@@ -18,7 +18,7 @@ int odl[100001];
 /*
 Tzw. listy sąsiedztwa - tablica vectorow
 
-kraw[x] jest vektorem(czyli rozszerzalna tablicą), w którym
+kraw[x] jest vectorem(czyli rozszerzalna tablicą), w którym
 trzymane są wszystkie numery wierzchołków, do których da się dojść
 z wierzchołka x 
 */
