@@ -429,7 +429,7 @@ reverse(w.begin(), w.end());
 reverse(w.begin()+2, w.begin.end());
 /* w = {7, 4, 1, 3} */
 ```
-Ponieważ string udostępnia wszystkie funkcje vectora, to powyższy kod można zastosować również do stringa.
+Ponieważ string udostępnia wszystkie funkcje vectora, to powyższy kod można zastosować również do odwracania fragmentów stringa.
 
 Szczegółowa dokumentacja:
 - [Reverse na Cpp0x](https://cpp0x.pl/dokumentacja/standard-C++/reverse/331)
