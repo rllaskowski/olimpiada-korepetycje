@@ -57,7 +57,9 @@ Najczęstsza [implementacja](/grafy/dfs.cpp) tego algorytmu wykorzystuje rekuren
 ![DFS animacja](/zdjecia/dfs_animation.png)
 
 ### BFS
-Algorytm **BFS**(ang. **Breadth First Search** - przeszukiwanie wszerz) służy do znajdowania najkrótszych ścieżek w grafie, w którym wszystkie krawędzie są tej samej długości.
+Algorytm **BFS**(ang. **Breadth First Search** - przeszukiwanie wszerz) będzie nam służył przede wszystkim do znajdowania najkrótszych ścieżek w grafie, w którym wszystkie krawędzie są tej samej długości.
+
+W trakcie działania BFS najpierw zostaną odwiedzone wszystkie wierzchołki w odległości 0 od wierzchołka startowego, potem wszystkie w odległości 1, potem wszystkie w odległości 2....
 
 W algorytmie wykorzystywana jest kolejka. [Implementacja](/grafy/bfs.cpp). 
 
