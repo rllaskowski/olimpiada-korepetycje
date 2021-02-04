@@ -1,11 +1,14 @@
 # STL - Standard Template Library
+- [Struktury danych w STL](/STL%20-%20Standard%20Template%20Library/readme.md#struktury-danych)
+    - [Para](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
+     - [Kolejka](/STL%20-%20Standard%20Template%20Library/readme.md#Kolejka)
+    - [Stos](/STL%20-%20Standard%20Template%20Library/readme.md#Stos)
+    - [Mapa](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
+    - [Zbiór](/STL%20-%20Standard%20Template%20Library/readme.md#zbiór)
+- [Przydatne funkcje](/STL%20-%20Standard%20Template%20Library/readme.md#przydatne-funkcje)
 
-## Struktury danych w STL
+## Struktury danych
 
-- [Para](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
-- [Stos](/STL%20-%20Standard%20Template%20Library/readme.md#Stos)
-- [Mapa](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
-- [Zbiór](/STL%20-%20Standard%20Template%20Library/readme.md#zbiór)
 ### Para
 Aby skorzystać ze par w C++ dodajemy do programu bibliotekę `utility`.
 
@@ -39,7 +42,49 @@ ocena = make_pair(3, "Jacek");
 */
 
 ```
+### Kolejka
+Aby skorzystać ze stosu w C++ dodajemy do programu bibliotekę `queue`
 
+```cpp
+#include <queue>
+```
+[Opis działania kolejki](/struktury%20danych/readme.md#Kolejka)
+
+```cpp
+/* stworzenie kolejki trzymającej stringi */
+queue<string> kolejka;
+
+/* dodaj na koniec kolejki wartości "Jan", "Andrzej", "Latawiec" */
+kolejka.push("Jan");
+kolejka.push("Andrzej");
+kolejka.push("Latawiec");
+
+/* wypisze 3 */
+cout << kolejka.size() << endl;
+
+/*
+Błąd! Stworzona kolejka trzyma stringi
+kolejka.push(123);
+*/
+
+/* wypisz pierwszą wartość na kolejce - "Jan" */
+cout << kolejka.front();
+
+
+if (!kolejka.empty()) {
+    cout << "Kolejka nie jest pusta" << endl;
+}
+
+/* Zdejmij pierwszą wartość z kolejki x3 */
+kolejka.pop();
+kolejka.pop();
+kolejka.pop()
+
+/*
+Błąd! Na kolejka nie ma już elementów 
+kolejka.pop();
+*/
+```
 ### Stos
 Aby skorzystać ze stosu w C++ dodajemy do programu bibliotekę `stack`
 
@@ -68,13 +113,13 @@ stos.push("coś");
 /* wypisz ostatnią wartość na stosie - 5 */
 cout << stos.top();
 
+/* Zdejmij ostatnią wartość ze stosu x2 */
+stos.pop();
+stos.pop();
+
 if (stos.empty()) {
     cout << "Stos jest pusty" << endl;
 }
-
-/* Zdejmij ostatnią wartość ze stosu x2 */
-stos.pop();
-stos.pop()
 
 /*
 Błąd! Na stosie nie ma już elementów 
@@ -222,3 +267,6 @@ int najmniejsza = *zbior.begin();
 int największa = *zbior.rbegin();
 
 ```
+
+
+## Przydatne funkcje
