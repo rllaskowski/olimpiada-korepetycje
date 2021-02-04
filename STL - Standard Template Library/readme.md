@@ -126,7 +126,65 @@ Błąd! Na stosie nie ma już elementów
 stos.pop();
 */
 ```
+### Vector
+Aby skorzystać z vectorów w C++ dodajemy do programu bibliotekę `vector`
 
+```cpp
+#include <vector>
+```
+
+Vector to nic innego jak tablica o dynamicznie zmieniającym się, w trakcie działania programu, rozmiarze. 
+
+```cpp
+/* Tworzymy pusty vector trzymający inty */
+vector<int> wektor;
+
+/* Dodaj na koniec vectora wartości 82, 3, 4 automatycznie zwiększając jego rozmiar */
+wektor.push_back(82);
+wektor.push_back(6);
+wektor.push_back(4);
+/* wektor = {82, 6, 4}  */
+
+/* wypisze 3 */
+cout << wektor.size() << endl();
+
+/* Wypisze 6 */
+cout << wektor[1] << endl;
+
+/* Zmienia rozmiar vectora na 5 */
+wektor.resize(5);
+/* wektor = {82, 6, 4, 0, 0} */
+
+/* 
+Błąd! wektor ma rozmiar 5
+cout << wektor[5];
+*/
+
+/*
+Błąd! Stworzony vector trzyma inty
+wektor[2] = "Abc";
+*/
+
+/* pętla foreach
+przydatna do przeglądania po kolei wartości vectora 
+wypisze 82, 6, 4, 0, 0
+*/
+for (int x : wektor) {
+    cout << x << ", ";
+}
+
+/* to samo za pomocą zwykłego fora */
+for (int i = 0; i < wektor.size(); i++) {
+    cout << wektor[i] << ", ";
+}
+
+/* Tworzy vector stringów z początkowym rozmiarem 1000 */
+vector<string> duzyWektor(1000);
+
+/* Możemy też zmniejszyć rozmiar vectora. Ostatnie elementy usuną się */
+duzyWektor.resize(2);
+
+```
 
 ### Mapa(tablica asosjacyjna, słownik)
 
@@ -172,12 +230,14 @@ Błąd ponieważ indeksami w tablicy są liczby nieujemne
 tab[-1] = 10;
 */
 ```
+
+Ograniczenia w postaci stałego rozmiaru możemy pozbyć się za pomocą vectorów. Natomiar wciąż pozostaje problem dotyczący zakresu indeksów oraz ich typów. 
 Korzystanie z mapy znosi oba ograniczenia. Tworząc mapę możemy zdecydować jakim typem będzie ona indeksowana, oraz
 jaki będzie typ trzymanych wartości. Wielkość mapy zmienia się również dynamicznie w trakcie działania programu przy dodawaniu do niej nowego klucza/indeksu.
 
 ```cpp
 /*
-Tworzymy mapę indeksowaną przez int, 
+Stworzenie mapy indeksowanej przez int, 
 która trzyma wartości typu string
 
 int - klucz/indeks
