@@ -477,7 +477,7 @@ Biblioteka `algorithm`
 
 Odwraca kolejność elementów w kontenerze sekwencyjnym(tablica, vector, string... )
 
-Przyjmuje wskaźniki/iteratory **first**, **last** i odwraca elementy w zakresie **<first, last)**
+Przyjmuje wskaźniki/iteratory **first**, **last** i odwraca kolejność elementów w zakresie **<first, last)**
 
 Czas działania funkcji jest liniowy od długości odwracanego fragmentu.
 
