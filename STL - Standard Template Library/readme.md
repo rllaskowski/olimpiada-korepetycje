@@ -2,7 +2,10 @@
 
 ## Struktury danych w STL
 
+- [Para](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
 - [Stos](/STL%20-%20Standard%20Template%20Library/readme.md#Stos)
+- [Mapa](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
+- [Zbiór](/STL%20-%20Standard%20Template%20Library/readme.md#zbiór)
 ### Para
 Aby skorzystać ze par w C++ dodajemy do programu bibliotekę `utility`.
 
