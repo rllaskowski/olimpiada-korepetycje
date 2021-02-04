@@ -105,7 +105,8 @@ W przeciwnym przypadku:
 |**4**| 0 | 0 | 1 | 0 |
 
 ```cpp
-/* Macierz sąsiedztwa początkowo wypełniona zerami */
+/* Macierz sąsiedztwa(tablica dwuwymiarowa)
+początkowo wypełniona zerami */
 int kraw[1000][1000];
 ...
 
@@ -116,7 +117,7 @@ for (int i = 0; i < m; i++) {
 
     /* 
     Zaznaczamy w macierzy istnienie krawędzi a->b oraz b->a
-    UWAGA! jeśli graf ma być nieskierowany, dodajemy tylko krawędź w jedną stronę!
+    UWAGA! jeśli graf ma być skierowany, dodajemy tylko krawędź w jedną stronę!
     */
     kraw[a][b] = 1;
     kraw[b][a] = 1;
@@ -162,7 +163,7 @@ for (int i = 0; i < m; i++) {
     /* 
     Do krawędzi wierzchołka a dodajemy wierzchołek b
     oraz na odwrót.
-    UWAGA! jeśli graf ma być nieskierowany, dodajemy tylko krawędź w jedną stronę!
+    UWAGA! jeśli graf ma być skierowany, dodajemy tylko krawędź w jedną stronę!
     */
     kraw[a].push_back(b);
     kraw[b].push_back(a);
