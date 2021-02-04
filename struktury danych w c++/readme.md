@@ -52,27 +52,41 @@ Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map`
 ```
 ### Mapa a tablica
 
-Klasyczne tablice w C++ mają z góry określoną, stałą wielkość oraz pozwalają na korzystanie tylko z indeksów liczbowych.
-Ze względu na swój ograniczony rozmiar, odniesienie się do za dużych indeksów poskutkuje błądem wykonania programu.
+Klasyczne tablice w C++ mają stałą w trakcie działania programu ilość trzymanych wartości oraz pozwalają na korzystanie tylko z indeksów liczbowych. Dodatkowo jeśli rozmiar tablicy to **R**, to zakres indeksów, z których możemy korzystać to **<0, R-1>**
 
 ```cpp
 int tab[3000];
 
-// poprawne ponieważ 222 < 3000
+/* poprawne ponieważ 0 <= 222 < 3000 */
 tab[222] = 4; 
 
-// Błąd ponieważ 40124 > 3000
+/* poprawne ponieważ 0 <= 2999 < 3000 */
+tab[2999] = 124; 
+
+/* poprawne ponieważ 0 <= 0 < 3000 */
+tab[0] = -15; 
+
+/*
+Błąd ponieważ 40124 > 3000
 tab[40124] = 10;
+*/
 
-// Błąd ponieważ w tablicy indeksujemy elementy od 0,
-// zatem ostatni element w tej tablicy ma indeks 2999
+/*
+Błąd ponieważ w tablicy indeksujemy elementy od 0, zatem ostatni element w tej tablicy ma indeks 2999
 tab[3000] = 9;
+*/
 
-// Błąd ponieważ indeksami w tablicy są 
-// wyłącznie wartości liczbowe
+/*
+Błąd ponieważ indeksami w tablicy są 
+wyłącznie wartości liczbowe
 tab["Napis"] = 10;
-```
+*/
 
+/*
+Błąd ponieważ indeksami w tablicy są liczby nieujemne
+tab[-1] = 10;
+*/
+```
 Korzystanie z mapy znosi oba ograniczenia. Tworząc mapę możemy zdecydować jakim typem będzie ona indeksowana, oraz
 jaki będzie typ trzymanych wartości. Wielkość mapy zmienia się również dynamicznie w trakcie działania programu.
 
@@ -88,28 +102,30 @@ map<int, string> miejsce;
 
 miejsce[1] = "Oskar";
 
-// Możemy korzystać z naprawdę dużych indeksów(pamiętając aby były w zakresie int'a)
+/* Możemy korzystać z naprawdę dużych indeksów */
 miejsce[12312411] = "Maciej";
 
-// A nawet z indeksów ujemnych! 
+/* A nawet z indeksów ujemnych */ 
 miejsce[-1233] = "Bartosz";
 
-/(Błąd... indeksy stworzonej przez nas mapy mają być typu int!
+/*
+Błąd! indeksy stworzonej przez nas mapy mają być typu int 
 miejsce["Ala"] = "Błażej"
+*/
 
-// Stwórzmy tablicę indeksowaną przez typ string, trzymającą wartości typu int
+/* Stwórzmy mapę indeksowaną przez string, trzymającą wartości typu int */
 map<string, int> ocena;
 
-// Teraz jest dobrze.
+/* Teraz jest dobrze. */
 ocena["Ala"] = 5;
 
-// A teraz mapa indeksowana przez string, trzymająca zmienne typu string
+/* A teraz mapa indeksowana przez string, trzymająca zmienne typu string */
 map<string, string> kolega;
 
 kolega["Andrzej"] = "Maciej";
 ```
 
-Pamiętajmy jednak, że korzystanie z map zamiast tablic, będzie kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu) wykonuje się w czasie logarytmicznym od ilości elementów w mapie. 
+Pamiętajmy jednak, że korzystanie z map zamiast tablic, kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu) wykonuje się w czasie logarytmicznym od ilości wstawionych do mapy kluczy.
 Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się zapisać za pomocą zwykłych tablic.
 
 ## Zbiór
