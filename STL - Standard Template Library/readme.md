@@ -7,6 +7,7 @@
     - [Mapa](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
     - [Zbiór](/STL%20-%20Standard%20Template%20Library/readme.md#zbiór)
 - [Przydatne funkcje](/STL%20-%20Standard%20Template%20Library/readme.md#przydatne-funkcje)
+    - [Reverse](/STL%20-%20Standard%20Template%20Library/readme.md#reverse)
 
 ## Struktury danych
 
@@ -220,7 +221,7 @@ Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map`
 ```
 #### Mapa a tablica
 
-Klasyczne tablice w C++ mają stałą w trakcie działania programu rozmiar oraz pozwalają na korzystanie tylko z indeksów liczbowych. Dodatkowo jeśli rozmiar tablicy to **R**, to zakres indeksów, z których możemy korzystać to **<0, R-1>**
+Klasyczne tablice w C++ mają stały, w trakcie działania programu, rozmiar oraz pozwalają na korzystanie tylko z indeksów liczbowych. Dodatkowo jeśli rozmiar tablicy to **R**, to zakres indeksów, z których możemy korzystać to **<0, R-1>**
 
 ```cpp
 int tab[3000];
@@ -334,7 +335,7 @@ Zbiór(**ang. set**) jest strukturą, która daje nam następujące funkcje:
 - dodanie nowej wartości 
 - sprawdzenie czy dana wartość już w nim występuje 
 - wzięcie najmniejszej/największej wartości
-- ilość róznych dodadnych wartości
+- ilość różnych dodanych wartości
 - usunięcie wartości
  
 Każda wartość w zbiorze występuje w nim dokładnie raz. Dodanie jej drugi raz nie powoduje zmiany.
@@ -387,3 +388,50 @@ Szczegółowa dokumentacja:
   - [Set na cplusplus](https://www.cplusplus.com/reference/set/set/) 
   
 ## Przydatne funkcje
+
+### Reverse
+Biblioteka `algorithm`
+
+Odwraca kolejność elementów w kontenerze sekwencyjnym(tablica, vector, string... )
+
+Przyjmuje dwa wskaźniki/iteratory wskazujące na początek oraz koniec sekwencji do odwrócenia.
+
+Czas działania funkcji jest liniowy od długości odwracanego fragmentu.
+
+#### Przykład z tablicą
+```cpp
+int tab[] = {1, 2, 3, 4};
+
+/* Odwróci całą tablicę */
+reverse(tab, tab+4);
+/* tab = {4, 3, 2, 1} */
+
+/* Odwróci tablicę od indeksu 1 do indeksu 2 */
+reverse(tab+1, tab+3);
+/* tab = {4, 2, 3, 1} */
+```
+
+#### Przykład z vectorem
+```cpp
+vector<int> w;
+
+w.push_back(1);
+w.push_back(3);
+w.push_back(4);
+w.push_back(7);
+/* w = {1, 3, 4, 7} */
+
+/* Odwróci cały vector */
+reverse(w.begin(), w.end());
+/* w = {7, 4, 3, 1} */
+
+/* Odwróci vector od indeksu 2 do końca */
+reverse(w.begin()+2, w.begin.end());
+/* w = {7, 4, 1, 3} */
+```
+Ponieważ string udostępnia wszystkie funkcje vectora, to powyższy kod można zastosować również do stringa.
+
+Szczegółowa dokumentacja:
+- [Reverse na Cpp0x](https://cpp0x.pl/dokumentacja/standard-C++/reverse/331)
+- [Reverse na cplusplus](https://www.cplusplus.com/reference/algorithm/reverse/) 
+  
