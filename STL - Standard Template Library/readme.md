@@ -389,12 +389,94 @@ Szczegółowa dokumentacja:
   
 ## Przydatne funkcje
 
+### Sort 
+Biblioteka `algorithm`
+
+Sortuje elementy w kontenerze sekwencyjnym(tablica, vector, string... ).
+
+Przyjmuje wskaźniki/iteratory **first**, **last** i sortuje elementy w zakresie **<first, last)**. Dodatkowo może przyjąć trzeci argument będący funkcją porównującą dwa elementy(**comparator**).
+
+#### Przykład z tablicą
+```cpp
+int tab[] = {4, 2, 5, 6, 2, 1};
+
+/* Posortuje całą tablicę. Nie podano comparatora, więc zostanie
+użyty domyślny, który posortuje tablicę w kolejności niemalejącej */
+sort(tab, tab+6);
+/* tab = {1, 2, 2, 4, 5, 6} */
+...
+
+/* Comparator ma zwrócić wartość true jeśli wartość podana jako pierwszy
+argument, tutaj 'a', ma pojawić się wcześniej w posortowanym ciągu.
+W przeciwnym przypadku ma zwrócić false */
+bool czyWiekszy(int a, int b) {
+    return a > b;
+}
+...
+
+int tab[] = {4, 2, 5, 6, 2, 1};
+
+/* Posortuje całą tablicę z użyciem comparatora, który wymusi 
+nierosnącą kolejność*/
+sort(tab, tab+6, czyWiekszy);
+/* tab = [6, 5, 4, 2, 2, 1] */
+```
+
+#### Przykład z vectorem
+```cpp
+vector<string> w;
+
+w.push_back("Ala");
+w.push_back("Wladek");
+w.push_back("Jasiek");
+w.push_back("Bartlomiej");
+/* w = {"Ala", "Wladek", "Jasiek", "Bartlomiej"} */
+
+/* Posortuje cały vector. Nie podano comparatora, więc zostanie
+użyty domyślny, który posortuje vector w kolejności niemalejącej 
+
+Przypomnienie: dla vectora stringów oznacza to, że napisy ustawią się w 
+porządku leksykograficznym(jak w słowniku) */
+sort(w.begin(), w.end());
+/* w = {"Ala", "Bartlomiej", "Jasiek", "Wladek"} */
+...
+
+/* Comparator ma zwrócić wartość true jeśli wartość podana jako pierwszy
+argument, ma pojawić się wcześniej w posortowanym ciągu.
+W przeciwnym przypadku ma zwrócić false 
+
+Przypomnienie: porównanie a > b dla stringów sprawdza 
+czy a jest większy(późniejszy) leksykograficznie od b */ 
+bool czyWiekszyLeks(string a, string b) {
+    return a > b;
+}
+...
+
+w.push_back("Ala");
+w.push_back("Wladek");
+w.push_back("Jasiek");
+w.push_back("Bartlomiej");
+/* w = {"Ala", "Wladek", "Jasiek", "Bartlomiej"} */
+
+/* Posortuje całą vector z użyciem comparatora, 
+który wymusi nierosnącą kolejność */
+sort(w.begin(), w.end(), czyWiekszyLeks);
+/* w = {"Wladek", "Jasiek", "Bartlomiej", "Ala"} */
+
+```
+Ponieważ string udostępnia wszystkie funkcje vectora, to powyższy kod można zastosować również do posortowania liter w stringu.
+
+Szczegółowa dokumentacja:
+- [Sort na Cpp0x](https://cpp0x.pl/dokumentacja/standard-C++/sort/350)
+- [Sort na cplusplus](https://www.cplusplus.com/reference/algorithm/sort/) 
+  
+
 ### Reverse
 Biblioteka `algorithm`
 
 Odwraca kolejność elementów w kontenerze sekwencyjnym(tablica, vector, string... )
 
-Przyjmuje dwa wskaźniki/iteratory wskazujące na początek oraz koniec sekwencji do odwrócenia.
+Przyjmuje wskaźniki/iteratory **first**, **last** i odwraca elementy w zakresie **<first, last)**
 
 Czas działania funkcji jest liniowy od długości odwracanego fragmentu.
 
