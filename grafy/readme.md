@@ -88,10 +88,10 @@ Dopóki kolejka niepusta:
 ### Macierz sąsiedztwa
 W macierzy(tablicy dwuwymiarowej) sąsiedztwa będzie zapisywali krawędzie w następujący sposób(niech naszą macierzą będzie tablica `kraw`):
 
-Jeśli istnieje krawędź `a->b`:
+- Jeśli istnieje krawędź `a->b`:
 `kraw[a][b] = 1` 
 
-W przeciwnym przypadku:
+- W przeciwnym przypadku:
 `kraw[a][b] = 0`
 
 
