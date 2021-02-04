@@ -170,9 +170,13 @@ wektor[2] = "Abc";
 wektor[4] = 123;
 /* wektor = {82, 6, 4, 0, 123} */
 
+/* Zmień rozmiar vectora, a nowe miejsca wypełnij wartością -3 */
+wektor.resize(7, -3);
+/* wektor = {82, 6, 4, 0, 123, -3, -3} */
+
 /* pętla foreach
 przydatna do przeglądania po kolei wartości vectora 
-wypisze: 82, 6, 4, 0, 123
+wypisze: 82, 6, 4, 0, 123, -3, -3
 */
 for (int x : wektor) {
     cout << x << ", ";
