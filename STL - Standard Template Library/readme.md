@@ -7,6 +7,7 @@
     - [Mapa](/STL%20-%20Standard%20Template%20Library/readme.md#mapatablica-asosjacyjna-słownik)
     - [Zbiór](/STL%20-%20Standard%20Template%20Library/readme.md#zbiór)
 - [Przydatne funkcje](/STL%20-%20Standard%20Template%20Library/readme.md#przydatne-funkcje)
+    - [Sort](/STL%20-%20Standard%20Template%20Library/readme.md#sort)
     - [Reverse](/STL%20-%20Standard%20Template%20Library/readme.md#reverse)
 
 ## Struktury danych
