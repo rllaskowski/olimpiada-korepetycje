@@ -19,7 +19,7 @@ int odl[100001];
 Tzw. listy sąsiedztwa - tablica vectorow
 
 kraw[x] jest vectorem(czyli rozszerzalna tablicą), w którym
-trzymane są wszystkie numery wierzchołków, do których da się dojść
+trzymane są numery wierzchołków, do których da się dojść
 z wierzchołka x 
 */
 vector<int> kraw[100001];
