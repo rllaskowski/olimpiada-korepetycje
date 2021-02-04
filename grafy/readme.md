@@ -46,12 +46,38 @@ Graf nieskierowany, acykliczny, którym istnieje dokładnie jedna ścieżka pomi
 ## Algorytmy
 
 ### DFS
-Algorytm DFS inaczej przeszukiwanie grafu w głąb opiera się na bardzo prostej zasadzie:
+Algorytm **DFS**(ang. **Depth First Search** - przeszukiwanie w głąb), opiera się na bardzo prostej zasadzie:
 
-- Jeśli z danego wierzchołka możesz przejść wychodzącą z niego krawędzią do
+- Jeśli z aktualnego wierzchołka można przejść wychodzącą z niego krawędzią do
 wierzchołka, który nie został wcześniej odwiedzony - przejdź tą krawędzią
 - W przeciwnym przypadku wróć skąd przyszedłeś
 
-Najczęstsza(i najprostsza) [implementacja](/grafy/dfs.cpp) tego algorytmu wykorzystuje rekurencję 
+Najczęstsza [implementacja](/grafy/dfs.cpp) tego algorytmu wykorzystuje rekurencję 
 
 ![DFS animacja](/zdjecia/dfs_animation.png)
+
+### BFS
+Algorytm **BFS**(ang. **Breadth First Search** - przeszukiwanie wszerz) służy do znajdowania najkrótszych ścieżek w grafie, w którym wszystkie krawędzie są tej samej długości.
+
+W algorytmie wykorzystywana jest kolejka. [Implementacja](/grafy/bfs.cpp). 
+
+```
+dodaj na kolejkę wierzchołek startowy
+ustaw odległość 0 wierzchołkowi startowemu
+
+Dopóki kolejka niepusta:
+    zdejmij z kolejki wierzchołek v
+
+    Dla każdej krawędzi v->x:
+        Jeśli x nie ma ustawionej odległości:
+            ustaw x odległość o 1 większą niż odległość v
+            wstaw x na kolejkę
+```
+
+![BFS animacja](/zdjecia/bfs_animation.gif)
+
+
+### DFS a BFS
+
+![DFS vs BFS](/zdjecia/dfs-vs-bfs.gif)
+

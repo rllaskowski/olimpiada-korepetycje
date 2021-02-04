@@ -91,6 +91,10 @@ $$ -->
 <div align="center"><img style="background: white;" src="../svg/bDRzqb99rm.svg"></div>
 
 ```cpp
+/*
+p1/p2.first - wspolrzedna x-owa punktu
+p1/p2.second - wspolrzedna y-owa punktu
+*/
 float odlegosc(pair<int, int> p1, pair<int, int p2>) {
     int a = p1.first-p2.first;
     int b = p1.second-p2.second;
