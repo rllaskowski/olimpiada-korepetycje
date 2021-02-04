@@ -86,7 +86,7 @@ Błąd! Na kolejka nie ma już elementów
 kolejka.pop();
 */
 ```
-Więcej informacji:
+Szczegółowa dokumentacja:
   - [Kolejka na Cpp0x](https://cpp0x.pl/kursy/Kurs-STL-C++/Adapter-kolejki-std-queue/117)
 
   - [Kolejka na cplusplus](https://www.cplusplus.com/reference/queue/queue/) 
@@ -133,7 +133,7 @@ Błąd! Na stosie nie ma już elementów
 stos.pop();
 */
 ```
-Więcej informacji:
+Szczegółowa dokumentacja:
   - [Stos na Cpp0x](https://cpp0x.pl/kursy/Kurs-STL-C++/Adapter-stosu-std-stack/116)
 
   - [Stos na cplusplus](https://www.cplusplus.com/reference/stack/stack/) 
@@ -210,7 +210,7 @@ duzyWektor.resize(2);
 /* duzyWektor = {"", ""}
 ```
 
-Więcej informacji:
+Szczegółowa dokumentacja:
   - [Vector na Cpp0x](https://cpp0x.pl/dokumentacja/standard-C++/vector/819)
 
   - [Vector na cplusplus](https://www.cplusplus.com/reference/vector/vector/) 
@@ -321,7 +321,7 @@ kolega["Andrzej"] = "Maciej";
 Pamiętajmy jednak, że korzystanie z map zamiast tablic, kosztuje nas dłuższym czasem działania. Jedna operacja na mapie(znalezienie szukanego elementu klucz->wartość) wykonuje się w czasie logarytmicznym od ilości wstawionych do mapy kluczy.
 Nie nadużywajmy ich jeśli są niepotrzebne, a rozwiązanie da się zapisać za pomocą zwykłych tablic.
 
-Więcej informacji:
+Szczegółowa dokumentacja:
   - [Mapa na Cpp0x](https://cpp0x.pl/kursy/Kurs-C++/Poziom-5/Kontenery-asocjacyjne-std-set-i-std-map/589)
 
   - [Mapa na cplusplus](https://www.cplusplus.com/reference/map/map/) 
@@ -385,7 +385,7 @@ int największa = *zbior.rbegin();
 ```
 Operacje dodawania, usuwania i liczenia występowań wartości w zbiorze są wykonywane w czasie logarytmicznym od wielkości zbioru.
 
-Więcej informacji:
+Szczegółowa dokumentacja:
   - [Set na Cpp0x](https://cpp0x.pl/kursy/Kurs-C++/Poziom-5/Kontenery-asocjacyjne-std-set-i-std-map/589)
 
   - [Set na cplusplus](https://www.cplusplus.com/reference/set/set/) 
