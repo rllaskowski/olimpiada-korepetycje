@@ -15,13 +15,7 @@ odl[x] - odleglość x od wierzchołka startowego
 */
 int odl[100001];
 
-/*
-Tzw. listy sąsiedztwa - tablica vectorow
-
-kraw[x] jest vectorem(czyli rozszerzalna tablicą), w którym
-trzymane są numery wierzchołków, do których da się dojść
-z wierzchołka x 
-*/
+/* Listy sąsiedztwa */
 vector<int> kraw[100001];
 
 void bfs(int s) {

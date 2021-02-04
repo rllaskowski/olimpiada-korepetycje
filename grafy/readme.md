@@ -143,6 +143,14 @@ To podejście możemy zrealizować za pomocą tablicy vectorów(rozszerzalne tab
 |**3**| 2, 1             |
 |**4**| 3                |
 ```cpp
+
+/*
+Listy sąsiedztwa - tablica vectorow
+
+kraw[x] jest vectorem(czyli rozszerzalna tablicą), w którym
+trzymane są numery wierzchołków, do których da się dojść
+z wierzchołka x 
+*/
 vector<int> kraw[100001];
 ...
 
