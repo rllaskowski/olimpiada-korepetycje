@@ -138,6 +138,7 @@ Vector to nic innego jak tablica o dynamicznie zmieniającym się, w trakcie dzi
 ```cpp
 /* Tworzymy pusty vector trzymający inty */
 vector<int> wektor;
+/* wektor = {} */
 
 /* Dodaj na koniec vectora wartości 82, 3, 4 automatycznie zwiększając jego rozmiar */
 wektor.push_back(82);
@@ -165,9 +166,12 @@ Błąd! Stworzony vector trzyma inty
 wektor[2] = "Abc";
 */
 
+wektor[4] = 123;
+/* wektor = {82, 6, 4, 0, 123} */
+
 /* pętla foreach
 przydatna do przeglądania po kolei wartości vectora 
-wypisze 82, 6, 4, 0, 0
+wypisze: 82, 6, 4, 0, 123
 */
 for (int x : wektor) {
     cout << x << ", ";
@@ -180,9 +184,15 @@ for (int i = 0; i < wektor.size(); i++) {
 
 /* Tworzy vector stringów z początkowym rozmiarem 1000 */
 vector<string> duzyWektor(1000);
+/* duzyWektor = {"", "", "",...""} */
+
+duzyWektor[2] = "Tekst";
+/* duzyWektor = {"", "", "Tekst",...""} */
 
 /* Możemy też zmniejszyć rozmiar vectora. Ostatnie elementy usuną się */
 duzyWektor.resize(2);
+/* duzyWektor = {"", ""}
+
 
 ```
 
