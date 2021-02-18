@@ -162,7 +162,7 @@ template<typename K, typename V>
 class Map : private BST<MapNode<K, V>, K> {
 
 public:
-    K& operator[](const K &key) {
+    V& operator[](const K &key) {
         return this->add(key)->value;
     }
 };
@@ -173,8 +173,8 @@ int main() {
     set.insert(3);
     set.insert(6);
 
-    std::cout << set.contains(5) << std::endl;
-    std::cout << set.contains(6) << std::endl;
+    std::cout << (set.contains(5)? "true" : "false") << std::endl;
+    std::cout << (set.contains(6)? "true" : "false") << std::endl;
 
 
     Map<int, int> map;
@@ -185,5 +185,12 @@ int main() {
     map[12] = 123;
     std::cout << map[12] << std::endl;
     std::cout << map[4] << std::endl;
+
+
+    Map<std::string, int> stringMap;
+
+    stringMap["text"] = 12;
+
+    std::cout << stringMap["text"] << std::endl;
 
 }
