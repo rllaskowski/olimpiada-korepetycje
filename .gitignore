@@ -13,6 +13,7 @@
 ./.git/hooks/pre-merge-commit.sample
 ./struktury danych/drzewo_bst
 ./struktury danych/kopiec
+./struktury danych/drzewo_avl
 ./struktury danych/drzewa przedziałowe/przedzial_przedzial_+_suma
 ./struktury danych/drzewa przedziałowe/przedzial_przedzial
 ./struktury danych/drzewa przedziałowe/przedzial_punkt

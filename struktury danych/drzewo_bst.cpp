@@ -1,55 +1,61 @@
 #include <iostream>
+#include <memory>
+#include <cassert>
 
 template<typename T>
 class Node {
 
+typedef std::shared_ptr<Node<T>> NodePtr;
+
 protected:
-    Node<T> *left;
-    Node<T> *right;
+    NodePtr left;
+    NodePtr right;
     T key;
 
 public:
-    Node(const T &key) : key{key} {
+    Node(const T &key) : key{key} {}
 
-    }
-
-    Node<T> * getLeft() {
+    NodePtr getLeft() {
         return this->left;
     }
 
-    Node<T> * getRight() {
+    NodePtr getRight() {
         return this->right;
     }
 
-    void setLeft(Node<T> *node) {
+    void setLeft(NodePtr node) {
         this->left = node;
     }
 
-    void setRight(Node<T> *node) {
+    void setRight(NodePtr node) {
         this->right = node;
     }
 
     T getKey() {
         return this->key;
     }
+
+    virtual ~Node<T>() = default;
 };
 
 template<class N, typename T>
 class BST {
 
+typedef std::shared_ptr<Node<T>> NodePtr;
+
 protected:
-    N * add(N *tree, const T &key) {
-        N * node;
+    NodePtr add(NodePtr tree, const T &key) {
+        NodePtr node;
 
         if (tree->getKey() > key) {
             if (!tree->getLeft()) {
-                tree->setLeft((node = new N(key)));
+                tree->setLeft((node = std::make_shared<N>(key)));
             } else {
                 node = add(tree->getLeft(), key);
             }
         } else if (tree->getKey() < key) {
              if (!tree->getRight()) {
-                tree->setRight((node = new N(key)));
+                tree->setRight((node = std::make_shared<N>(key)));
             } else {
                 node = add(tree->getRight(), key);
             }
@@ -60,7 +66,7 @@ protected:
         return node;
     }
 
-    N * search(N *tree, const T &key) {
+    NodePtr search(NodePtr tree, const T &key) {
         if (!tree) {
             return NULL;
         } else if (tree->getKey() > key) {
@@ -72,34 +78,24 @@ protected:
         }
     }
 
-    void freeTree(N *tree) {
-        if (tree) {
-            freeTree(tree->getLeft());
-            freeTree(tree->getRight());
-
-            delete tree;
-        }
-    }
-
-    N *root;
+    NodePtr root;
 
     BST() {
         this->root = NULL;
     }
 
     ~BST() {
-        freeTree(this->root);
     }
 
-    N * add(const T &key) {
+    NodePtr add(const T &key) {
         if (root) {
             return this->add(this->root, key);
         } else {
-            return (root = new N(key));
+            return (root = std::make_shared<N>(key));
         }
     }
 
-    N * search(const T &key) {
+    NodePtr search(const T &key) {
         return this->search(this->root, key);
     }
 };
@@ -118,39 +114,15 @@ public:
 };
 
 template<typename K, typename V>
-class MapNode {
+class MapNode : public Node<K> {
 
-private:
-    MapNode *left;
-    MapNode *right;
-    K key;
 
 public:
     V value;
 
-    MapNode(const K &key) : key{key} {
+    MapNode(const K &key) : Node<K>{key} {
         
     };
-
-    MapNode<K, V> * getLeft() {
-        return this->left;
-    }
-
-    MapNode<K, V> * getRight() {
-        return this->right;
-    }
-
-    K getKey() {
-        return this->key;
-    }
-
-    void setLeft(MapNode<K, V> *node) {
-        this->left = node;
-    }
-
-    void setRight(MapNode<K, V> *node) {
-        this->right = node;
-    }
 
     V getValue() {
         return this->value;
@@ -163,19 +135,22 @@ class Map : private BST<MapNode<K, V>, K> {
 
 public:
     V& operator[](const K &key) {
-        return this->add(key)->value;
+        return std::dynamic_pointer_cast<MapNode<K, V>>(this->add(key))->value;
     }
 };
 
 int main() {
     Set<int> set;
 
-    set.insert(3);
-    set.insert(6);
+    for (int i = 0; i <= 10000; i++) {
+        set.insert(i);
+    }
 
-    std::cout << (set.contains(5)? "true" : "false") << std::endl;
-    std::cout << (set.contains(6)? "true" : "false") << std::endl;
+    for (int i = 0; i <= 10000; i++) {
+        assert(set.contains(i));
+    }
 
+    std::cout << "SET TEST PASSED" << std::endl;
 
     Map<int, int> map;
 
@@ -186,11 +161,11 @@ int main() {
     std::cout << map[12] << std::endl;
     std::cout << map[4] << std::endl;
 
-
     Map<std::string, int> stringMap;
 
     stringMap["text"] = 12;
 
     std::cout << stringMap["text"] << std::endl;
+
 
 }

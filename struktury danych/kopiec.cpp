@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 const int M = 1 << 20;
@@ -48,6 +48,8 @@ void insert(int val) {
 }
 
 int main() {
+    int x = pow(30000,2.0);
+    cout << x << endl;
     insert(1);
     insert(8);
     insert(2);
