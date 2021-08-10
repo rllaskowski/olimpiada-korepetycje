@@ -17,7 +17,7 @@ int main() {
 
     int pocz = 0; // początek(głowa gąsiennicy)
     int kon = 0; // koniec gąsiennicy
-    int suma = 0; // suma liczb na gąsiennicy(na przedziale <kon, pocz>)
+    int suma = 0; // suma liczb na gąsiennicy(suma liczb w tablicy na przedziale <kon, pocz>)
 
     while (pocz <= n) {
         /* Głowa gąsiennicy weszła na nową liczbę - dodajemy ją do sumy */
