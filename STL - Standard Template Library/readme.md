@@ -84,7 +84,7 @@ kolejka.pop();
 kolejka.pop()
 
 /*
-Błąd! Na kolejka nie ma już elementów 
+Błąd! Na kolejce nie ma już elementów 
 kolejka.pop();
 */
 ```
@@ -222,7 +222,7 @@ Aby skorzystać z mapy w C++ dodajemy do programu bibliotekę `map`
 ```
 #### Mapa a tablica
 
-Klasyczne tablice w C++ mają stały, w trakcie działania programu, rozmiar oraz pozwalają na korzystanie tylko z indeksów liczbowych. Dodatkowo jeśli rozmiar tablicy to **R**, to zakres indeksów, z których możemy korzystać to **<0, R-1>**
+Klasyczne tablice w C++ mają stały w trakcie działania programu rozmiar oraz pozwalają na korzystanie tylko z indeksów liczbowych. Dodatkowo jeśli rozmiar tablicy to **R**, to zakres indeksów, z których możemy korzystać to **<0, R-1>**
 
 ```cpp
 int tab[3000];
