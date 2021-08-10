@@ -51,9 +51,13 @@ cout << wynik;
 
 Oczywiście to podejście jest za wolne. Nasz algorytm działa w złożności kwadratowej ponieważ w pesmistycznym przypadku sprawdzi wszystkie możliwe podciągi, których dla ciągu o długości **n** jest około `n*n`
 
+# TODO(opisać metodę gąsiennicy)
+[przykład działania](./grzejnik.cpp)
 ## Podejście metodą gąsiennicy
 
-Zauważmy, że jeśli dla indeksu **p** znaleźliśmy takie **k**(k<=p), że suma liczb w ciągu od **k** do **p** jest równa lub większa **S**
+Zauważmy, że jeśli dla indeksu **k** znaleźliśmy takie **p**(k<=p), że suma liczb w ciągu od **k** do **p** jest równa lub większa **S** to dla wszystkich
+**x** > **p** suma liczb w ciągu  ...
+
 
 
 ```cpp

@@ -7,33 +7,47 @@ int tab[1000000];
 
 int main() {
     int n, K;
-    int w = 1000000000;
-    bool wyn = false;
+    int minimalnaDlugosc = 1000000000;
+    bool znalezionoWynik = false;
     
     cin >> n >> K;
     for(int i = 0;i<n;i++){
         cin >> tab[i];
     }
-    int p = 0;
-    int k = 0;
-    int s = 0;
-    while(p <= n){
-        s += tab[p];
-        while(s-tab[k]>=K){
-            s-=tab[k];
-            k++;
+
+    int pocz = 0; // początek(głowa gąsiennicy)
+    int kon = 0; // koniec gąsiennicy
+    int suma = 0; // suma liczb na gąsiennicy(na przedziale <kon, pocz>)
+
+    while (pocz <= n) {
+        /* Głowa gąsiennicy weszła na nową liczbę - dodajemy ją do sumy */
+        suma += tab[pocz];
+       
+        /* Zauważmy, że chcemy aby suma liczb na gąsiennicy była większa lub równa K, ale również gąsiennica powinna być jak najkrótsza.
+        (chcemy poznać długość najkrótszego przedziału, na którym suma jest >= K)
+        Zatem jeśli suma > K to chcielibyśmy gąsiennicę skracać, przesuwając jej koniec do przodu(usuwając ostanti element). 
+        Robimy to dopóki usunięcie ostatniego elementu gąsiennicy nie sprawi, że suma zejdzie poniżej K.
+
+        Warunek pętli przeczytamy tak: dopóki można skrócić gąsiennicę o jej koniec, tak aby suma nie zeszła poniżej K */
+        while (suma-tab[kon] >= K) {
+            suma -= tab[kon];
+            kon++;
         }
-        if(s>=K){
-            if(p-k < w){
-                w = p-k+1;
-                wyn = true;
-            }
+
+
+        /* Skróciliśmy gąsiennicę maksymalnie jak się dało. Sprawdzamy teraz czy suma jest odpowiednio duża.
+        Jeśli jest to próbujemy poprawić wynik aktualną długością gąsiennicy: pocz-kon+1 */
+        if (suma >= K) { 
+            minimalnaDlugosc = min(minimalnaDlugosc, pocz-kon+1);
+            znalezionoWynik = true;
         }
-        p++;
+        
+        pocz++;
     }
-    if(wyn){
-        cout << w;
-    }else{
+
+    if (znalezionoWynik) {
+        cout << minimalnaDlugosc;
+    } else {
         cout << "NIE";
     }
     return 0;
