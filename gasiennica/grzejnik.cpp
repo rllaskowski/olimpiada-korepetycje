@@ -24,7 +24,7 @@ int main() {
         suma += tab[pocz];
        
         /* Zauważmy, że chcemy aby suma liczb na gąsiennicy była większa lub równa K, ale również gąsiennica powinna być jak najkrótsza.
-        (chcemy poznać długość najkrótszego przedziału, na którym suma jest >= K)
+        (wynika to z treści zadania: chcemy poznać długość najkrótszego przedziału, na którym suma jest >= K)
         Zatem jeśli suma > K to chcielibyśmy gąsiennicę skracać, przesuwając jej koniec do przodu(usuwając ostanti element). 
         Robimy to dopóki usunięcie ostatniego elementu gąsiennicy nie sprawi, że suma zejdzie poniżej K.
 
