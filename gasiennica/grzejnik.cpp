@@ -16,34 +16,34 @@ int main() {
     }
 
     int pocz = 0; // początek(głowa gąsiennicy)
-    int kon = 0; // koniec gąsiennicy
-    int suma = 0; // suma liczb na gąsiennicy: suma liczb w tablicy na przedziale <kon, pocz>
+    int suma = tab[0]; // suma liczb na gąsiennicy: suma liczb w tablicy na przedziale <kon, pocz>
 
-    while (pocz <= n) {
-        /* Głowa gąsiennicy weszła na nową liczbę - dodajemy ją do sumy */
-        suma += tab[pocz];
-       
-        /* Zauważmy, że chcemy aby suma liczb na gąsiennicy była większa lub równa K, ale również gąsiennica powinna być jak najkrótsza.
-        (wynika to z treści zadania: chcemy poznać długość najkrótszego przedziału, na którym suma jest >= K)
-        Zatem jeśli suma > K to chcielibyśmy gąsiennicę skracać, przesuwając jej koniec do przodu(usuwając ostanti element). 
-        Robimy to dopóki usunięcie ostatniego elementu gąsiennicy nie sprawi, że suma zejdzie poniżej K.
+    // początkowo nasza gąsiennica zawiera liczby z przedziału <0, 0>
 
-        Warunek pętli przeczytamy tak: dopóki można skrócić gąsiennicę o jej koniec, tak aby suma nie zeszła poniżej K */
-        while (suma-tab[kon] >= K) {
-            suma -= tab[kon];
-            kon++;
-        }
-
-
-        /* Skróciliśmy gąsiennicę maksymalnie jak się dało. Sprawdzamy teraz czy suma jest odpowiednio duża.
-        Jeśli jest to próbujemy poprawić wynik aktualną długością gąsiennicy: pocz-kon+1 */
-        if (suma >= K) { 
-            minimalnaDlugosc = min(minimalnaDlugosc, pocz-kon+1);
-            znalezionoWynik = true;
-        }
+    for (int kon = 0; kon < n; kon++) {
+        /*
+        Gąsiennica znajduje się na przedziale <kon, pocz>
         
-        pocz++;
+        Chcemy rozciągać naszą gąsiennicą do przodu(dodawać do niej nowe liczby z prawej strony)
+        dopóki suma znajdujących się na niej liczb jest za mała(warunek suma < K). 
+        Uważamy jednak, żeby nie wyjść poza tablicę!(warunek pocz+1 < n)
+        */
+        while (pocz+1 < n && suma < K) {
+            pocz++;
+            suma += tab[pocz];
+        }
+
+        /* Jeśli suma liczb na gąsiennicy jest odpowiednia, 
+        próbujemy poprawić nasz wynik aktualną długością gąsiennicy: pocz-kon+1*/
+        if (suma >= K) {
+            znalezionoWynik = true;
+            minimalnaDlugosc = min(minimalnaDlugosc, pocz-kon+1);
+        }
+
+        /* Po każdym przejściu pętli koniec gąsienincy przesuwa się o 1 w prawo(usuwa się ostatni lewy element) */
+        suma -= tab[kon];
     }
+
 
     if (znalezionoWynik) {
         cout << minimalnaDlugosc;
