@@ -46,7 +46,7 @@ ocena = make_pair(3, "Jacek");
 
 ```
 ### Kolejka
-Aby skorzystać ze stosu w C++ dodajemy do programu bibliotekę `queue`
+Aby skorzystać ze kolejki w C++ dodajemy do programu bibliotekę `queue`
 
 ```cpp
 #include <queue>

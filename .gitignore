@@ -1,17 +1,17 @@
-./update.sh
-./.git/hooks/pre-rebase.sample
 ./.git/hooks/pre-applypatch.sample
-./.git/hooks/prepare-commit-msg.sample
-./.git/hooks/update.sample
+./.git/hooks/applypatch-msg.sample
 ./.git/hooks/commit-msg.sample
+./.git/hooks/prepare-commit-msg.sample
 ./.git/hooks/pre-commit.sample
 ./.git/hooks/pre-receive.sample
-./.git/hooks/applypatch-msg.sample
 ./.git/hooks/fsmonitor-watchman.sample
-./.git/hooks/post-update.sample
 ./.git/hooks/pre-push.sample
+./.git/hooks/pre-rebase.sample
+./.git/hooks/update.sample
 ./.git/hooks/pre-merge-commit.sample
+./.git/hooks/post-update.sample
+./struktury danych/drzewa przedziałowe/punkt_przedzial
 ./struktury danych/drzewa przedziałowe/przedzial_przedzial_+_suma
 ./struktury danych/drzewa przedziałowe/przedzial_przedzial
 ./struktury danych/drzewa przedziałowe/przedzial_punkt
-./struktury danych/drzewa przedziałowe/punkt_przedzial
+./update.sh
