@@ -64,7 +64,7 @@ int main() {
         if (uni(u, v)) {
             // wierzchołki nie były w tym samym zbiorze
             // do minimalnego drzewa rozpinającego dodajemy wartość nowej krawędzi
-            mdr += c;
+            mdr += weight;
             used_edges += 1;
 
             if (used_edges == n-1) {
