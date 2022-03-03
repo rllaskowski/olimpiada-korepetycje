@@ -40,7 +40,6 @@ bool uni(int a, int b) {
 }
 
 
-
 int main() {
     int n, m, a, b, c;
 
@@ -51,7 +50,7 @@ int main() {
         edges.push_back(make_tuple(c, a, b));
     }
 
-    int tree_size = 1;
+    int used_edges = 0;
     int mdr = 0;
 
     sort(edges.begin(), edges.end());
@@ -64,20 +63,18 @@ int main() {
 
         if (uni(u, v)) {
             // wierzchołki nie były w tym samym zbiorze
-            // do minimalnego drzewa rozpinającego 
-            // dodajemy wartość nowej krawędzi
+            // do minimalnego drzewa rozpinającego dodajemy wartość nowej krawędzi
             mdr += c;
-            tree_size += 1;
+            used_edges += 1;
 
-            if (tree_size == n) {
-                // utworzono już całe drzewo
-                // nie ma co dalej liczyć
+            if (used_edges == n-1) {
+                // utworzono już całe drzewo, nie ma co dalej liczyć
                 break;
             }
         }   
     }
 
-    if (tree_size != n) {
+    if (used_edges != n-1) {
         // wejściowy graf nie był spójny i nie udało się 
         // utworzyć minimalnego drzewa rozpinającego
         cout << "NIE" << endl;
