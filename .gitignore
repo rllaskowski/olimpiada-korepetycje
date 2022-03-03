@@ -1,4 +1,3 @@
-./grafy/find_union
 ./.git/hooks/pre-applypatch.sample
 ./.git/hooks/applypatch-msg.sample
 ./.git/hooks/commit-msg.sample
